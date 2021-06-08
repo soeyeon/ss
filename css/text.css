@@ -1,0 +1,319 @@
+@font-face {
+  font-family: 'paybooc-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html, body {
+  font-family: 'paybooc-Bold';
+  margin: 0;
+  padding: 0;
+  background-color: rgb(243, 229, 211); 
+  -ms-overflow-style : none;
+}
+body::-webkit-scrollbar { 
+  display : none; 
+}
+
+.container{
+  width: 95%;
+  margin : auto;
+  overflow: hidden;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  font-family: 'paybooc-Bold';
+  background-color:black;
+  color: white;
+  border-bottom: brown 5px solid;
+  min-height: 70px;
+  height: 100px;
+}
+header a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+header li{
+  display: inline;
+  padding-left: 30px;
+  float: left;
+  padding-top: 20px;
+  list-style: none;
+  position: relative;
+}
+header #branding {
+  float: left;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+header #branding h1{
+  margin: 0;
+}
+header nav {
+  float: left;
+  margin-top: 10px;
+  list-style: none;
+}
+header nav li ul {
+  font-size: 5px;
+  opacity: 0;
+  list-style: none;
+}
+header nav li:hover ul{
+  opacity: 1;
+}
+header .current a{
+  color: palevioletred;
+  font-weight: bold;
+}
+header a:hover {
+  color: blanchedalmond;
+  font-weight: bold;
+}
+/* footer */
+footer {
+  padding: 15px;
+  background: rgb(245, 210, 158);
+  text-align: center;
+  border-top: brown 5px solid;
+}
+/* team */
+#teamproject{
+  font-family: 'NanumSquare', sans-serif;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+#teamproject h2{
+  font-family: 'Jua', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  color: #731B47;
+  font-size: 2.8vw!important;
+}
+
+.ex{
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.6vw;
+}
+
+.img-box{
+  text-align: center;
+  padding-bottom: 7%;
+  padding-top: 1%;
+}
+
+.img-box img{
+  width: 57vw;
+}
+
+#teamproject h3{
+  font-weight: bold!important;
+  font-size: 1.5vw!important;
+  padding-bottom: 1.5%;
+}
+#temproject .card-body
+.ex2{
+  font-size: 1.4vw;
+  margin-bottom: 0.8%;
+}
+
+.ex3{
+  font-size: 1.4vw;
+}
+
+.big_team_container{
+  margin-top: 7%;
+  font-weight: bold;
+}
+
+#teamproject .card{
+  height: 220px;
+}
+
+#teamproject .card-text{
+  height: 22px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#teamproject h5{
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+#teamproject .card-text, #teamproject .card-body a{
+  font-size: 1.2vw;
+}
+/* mbti1 */
+#mydiv{
+  position:relative;
+  width:100%;
+  height:490px;
+  overflow:hidden;
+}
+#mbtimove img{
+  height: 480px;
+  padding-top: 5px;
+}
+#mbtisite{
+  text-align: right;
+  padding-right: 10px;
+}
+#mbtisite a{
+  text-decoration-line : none;
+}
+/* mbti2 */
+#ba0,#ba1,#ba2,#ba3,#ba4,#ba5,#ba6,#ba7,#ba8,#ba9,#ba10,#ba11,#ba12,#ba13,#ba14,#ba15,#ba16,#ba17,#ba18,#ba19,#ba20,#ba21,#ba22,#ba23{
+  position:absolute;
+}
+#ba1,#ba2,#ba3,#ba4,#ba5,#ba6,#ba7,#ba8,#ba9,#ba10,#ba11,#ba12,#ba13,#ba14,#ba15,#ba16,#ba17,#ba18,#ba19,#ba20,#ba21,#ba22,#ba23{
+  display:none;
+}
+#ban {
+  position:absolute;
+  overflow:hidden;
+  width:500px;
+  height:500px;
+  cursor:pointer;
+  float: left;
+}
+#ban img{
+  height: 500px;
+  width: 500px;
+}
+#bans{
+  height: 570px;
+  padding: 40px 40px 0 40px;
+
+}
+#mbtipick{
+  height: 500px;
+  float: right;
+}
+
+
+/* mbti3 */
+article {
+  flex-direction: column;
+}
+
+.question {
+  display: none;
+}
+
+.result {
+  display: none;
+}
+
+.share {
+  margin: 0 auto;
+}
+
+.start, .question{
+  text-align: center;
+  padding: 85px;
+}
+
+.start button, .question button{
+  width: 500px;
+  padding: 50px;
+}
+
+.start h2, .question h2{
+  padding: 40px;
+}
+
+.question button{
+  width: 500px;
+}
+
+.result{
+  text-align: center;
+  padding: 30px;
+}
+.result h2{
+  padding: 0;
+}
+/* Media Quaries */
+@media(max-width: 768px) {
+  header #branding,
+  header nav,
+  header nav li,
+  footer
+  {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  header li, .quote button {
+    display: block;
+    width: 100%;
+  }
+  header{
+    padding: 10px;
+  }
+  #nav li{
+    text-align: left;
+  }
+  /* team */
+  #teamproject{
+    margin-top: 7%;
+  }
+
+  #teamproject h2{
+    font-size: 7vw!important;
+  }
+
+  .ex{
+    font-size: 4vw;
+  }
+
+  .img-box img{
+    width: 80vw;
+  }
+
+  #teamproject h3{
+    font-size: 3vw!important;
+  }
+
+  .ex2, .ex3{
+    font-size: 3vw;
+  }
+
+  #teamproject .card{
+    height: 200px;
+  }
+  
+  #teamproject h5{
+    font-size: 3.5vw;
+  }
+
+  #teamproject .btn{
+    margin-top: 2%;
+  }
+  
+  #teamproject .card-text, #teamproject .card-body a{
+    font-size: 3vw;
+  }
+  .start button, .question button, .question button{
+    width: 300px;
+    padding: 30px;
+  }
+  .result h3{
+    font-size: 20px;
+  }
+  #mbtipick{
+    width: 100%;
+  }
+  .start{
+    padding-bottom: 120px;
+  }
+}

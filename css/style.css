@@ -1,0 +1,453 @@
+@font-face {
+  font-family: 'paybooc-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body::-webkit-scrollbar { 
+  display : none; 
+}
+
+html{
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: rgb(243, 229, 211); 
+  -ms-overflow-style : none;
+  font-family: 'paybooc-Bold';
+}
+
+.container{
+  width: 95%;
+  margin : auto;
+  overflow: hidden;
+  text-align: center;
+  align-items: center;
+  font-family: 'paybooc-Bold';
+}
+
+section{
+  margin: 0 7%;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+
+.nav-item{
+  padding: 10px 30px;
+}
+
+.navbar-light .navbar-nav .nav-link active.active{
+  color: #363537;
+}
+
+.navbar-brand{
+  margin: 0;
+}
+
+/* index */
+
+#main{
+  padding-top: 20px;
+}
+
+article#main-col {
+  width:80%;
+  float: right;
+}
+
+article#main-col p{
+  font-size: 30px;
+  font-family: 'paybooc-Bold';
+}
+
+#myprofile #myp{
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+}
+
+#myprofile #insta{
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+#myweb{
+  font-family: 'paybooc-Bold';
+}
+#myweb img{
+  height: 300px;
+  float: left;
+  margin: 10px;
+}
+
+#myweb iframe{
+  height: 300px;
+  margin: 10px;
+}
+aside#sidebar{
+  width: 15%;
+  float: left;
+  text-align: left;
+}
+
+aside#sidebar .btn {
+  cursor: pointer;
+}
+
+aside#sidebar .clicked {
+  color: #7f8c8d;
+}
+
+.form, .greetings {
+  display: none;
+}
+
+aside#sidebar input{
+  margin-bottom: 10px;
+}
+
+.showing {
+  display: block;
+}
+
+/* dog */
+#carousel-example-generic{
+  margin: 50px 0 60px 30%;
+}
+
+.carousel-inner p{
+  
+  display:inline-block;
+  color: white;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+  font-family: 'BBTreeGR';
+}
+
+#bori h1{
+  padding-top: 30px;
+  text-align: center;
+}
+
+/* top.js */
+
+a.jcm-top {
+  position: fixed;
+  right: 1%;
+  bottom: 5%;
+  text-align: center;
+  width: 4%;
+  height: 5%;
+  z-index: 999;
+  display: none; 
+}
+
+/* hobby */
+
+#pcard img{
+  height: 400px;
+  width: 400px;
+  padding: 2px;
+}
+
+#pcard p{
+  font-size: 20px;
+  padding: 20px;
+}
+
+#pcard h1{
+  font-size: 50px;
+}
+
+#pcard div{
+  display:inline-block;
+  padding:0 10px;
+}
+
+#hiking h1{
+  color: green;
+				background-color: #c6f3c6;
+				border-bottom: 5px solid #00d000;
+}
+
+#swimming h1{
+  color: rgb(78, 195, 241);
+				background-color: #c7f0ee;
+				border-bottom: 5px solid rgb(78, 195, 241);
+}
+
+#climbing h1{
+  color: rgb(181, 73, 231);
+				background-color: #e9c7f0;
+				border-bottom: 5px solid rgb(181, 73, 231);
+}
+
+#voice h1{
+  color: rgb(236, 39, 65);
+				background-color: #f5afc4;
+				border-bottom: 5px solid rgb(236, 39, 65);
+}
+
+#hat h1{
+  color: rgb(253, 119, 29);
+				background-color: rgb(255, 211, 182);
+				border-bottom: 5px solid rgb(253, 119, 29);
+}
+
+#speech h1{
+  color: rgb(139, 103, 3);
+				background-color: #e6cba4;
+				border-bottom: 5px solid rgb(139, 103, 3);
+}
+
+#music h1{
+  color: rgb(1, 95, 1);
+				background-color: #15aa42;
+				border-bottom: 5px solid rgb(1, 95, 1);
+}
+
+#what h1{
+  color: rgb(0, 0, 0);
+				background-color: #2a3030;
+				border-bottom: 5px solid rgb(0, 0, 0);
+}
+
+/* footer */
+
+footer {
+  padding: 10px;
+  background: rgb(241, 217, 180);
+  text-align: center;
+  border-top: brown 5px solid;
+  height: 50px;
+  width: 100%;
+  margin-top: 3%;
+  bottom: 0; 
+}
+
+footer p{
+  font-family: 'BBTreeGR';
+  padding: 27px 0;
+}
+
+/* Team */
+
+#teamproject .container{
+    height: 100%;
+    padding: 1vw 0.4vw;
+    text-align: left;
+}
+
+#teamproject{
+  font-family: 'NanumSquare', sans-serif;
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+#teamproject h2{
+  font-family: 'Jua', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  color: #731B47;
+  font-size: 2.8vw!important;
+}
+
+#teamproject .ex{
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.6vw;
+}
+
+#teamproject  .img-box{
+  text-align: center;
+  padding-bottom: 7%;
+  padding-top: 1%;
+}
+
+#teamproject .img-box img{
+  width: 57vw;
+}
+
+#teamproject h3{
+  font-weight: bold!important;
+  font-size: 1.5vw!important;
+  padding-bottom: 1.5%;
+}
+
+#teamproject .ex2{
+  font-size: 1.4vw;
+  margin-bottom: 0.8%;
+}
+
+#teamproject .ex3{
+  font-size: 1.4vw;
+}
+
+#teamproject .big_team_container{
+  margin-top: 7%;
+  font-weight: bold;
+}
+
+#teamproject .card{
+  height: 220px;
+}
+
+#teamproject .card-text{
+  height: 22px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#teamproject h5{
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+#teamproject .card-text, #teamproject .card-body a{
+  font-size: 1.2vw;
+}
+
+ul {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+
+li {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+
+}
+
+/* Media Quaries */
+@media(max-width: 768px) {
+  header #branding,
+  header nav,
+  header nav li,
+  footer,
+  article#main-col,
+  #myweb img,
+  #myweb iframe,
+  #pcard div
+  {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+
+/* header */
+
+  header{
+    padding: 10px;
+  }
+
+  header li, .quote button {
+    display: block;
+    width: 100%;
+  }
+
+/* index */
+
+  aside#sidebar{
+    width: 100%;
+    padding-bottom: 50px;
+    margin-left:30%;
+    text-align: left;
+  }
+
+  article#main-col p{
+    font-size: 15px;
+  }
+
+  #myprofile #myp{
+    height: 400px;
+    width: 400px;
+  }
+
+  #ins img{
+    height: 10px;
+    width: 10px;
+  }
+
+  #myprofile #font7{
+    font-size: 35px;
+  }
+  #myprofile img{
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+  }
+
+/* hobby */
+
+  #pcard img{
+    width: 250px;
+    height: 250px;
+  }
+
+  #bori h3{
+    font-size: 25px;
+  }
+
+  /* 팀 */
+
+  #teamproject{
+    margin-top: 7%;
+  }
+
+  #teamproject h2{
+    font-size: 7vw!important;
+  }
+
+  .ex{
+    font-size: 4vw;
+  }
+
+  .img-box img{
+    width: 80vw;
+  }
+
+  #teamprojecth3{
+    font-size: 3vw!important;
+  }
+
+  .ex2, .ex3{
+    font-size: 3vw;
+  }
+
+  #teamproject .card{
+    height: 200px;
+  }
+  
+  #teamproject h5{
+    font-size: 3.5vw;
+  }
+
+  #teamproject .btn{
+    margin-top: 2%;
+  }
+  
+  #teamproject .card-text, #teamproject .card-body a{
+    font-size: 3vw;
+  }
+  #bori{
+    padding-bottom: 100px;
+  }
+  #bori h1{
+    padding-bottom: 30px;
+  }
+  #carousel-example-generic{
+    margin: 0;
+  }
+}

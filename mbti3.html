@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="소연, 전소연">
+  <meta name="description" content="아름다운 소연">
+  <meta name="author" content="Soyeon Jean">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+  crossorigin="anonymous"></script>
+  <title>소연세상</title>
+  <link rel="stylesheet" href="css/text.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="font-size: 45px;">SOYEON'S BLOG</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="hobby.html">HOBBY</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">PORTFOLIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="dog.html">MY DOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team.html">TEAM</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle  active" aria-current="page" href="mbti1.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                MBTI
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="mbti1.html">TYPE</a></li>
+                <li><a class="dropdown-item" href="mbti2.html">BUNDLE</a></li>
+                <li><a class="dropdown-item" href="mbti3.html">TEST</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown" style="padding-left: 200px;">
+              <a class="nav-link dropdown-toggle" href="mbti1.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                소개영상
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="https://youtu.be/hbWd_fGh21k" target="_blank">중간고사</a></li>
+                <li><a class="dropdown-item" href="https://youtu.be/UOADkN9faoY">기말고사</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+<div id="container">
+  <article class="start">
+    <h1 class="mt-5 text-center">초간단 MBTI 테스트</h1>
+    <h2 class="text-center">나의 MBTI는 뭘까?</h2>
+    <button type="button" class="btn btn-primary mt-5" onclick="start();">Start Test</button>
+  </article>
+
+  <article class="question">
+    <div class="progress mt-5">
+        <div class="progress-bar" role="progressbar" style="width: calc(100/12*1%)"></div>
+    </div>
+    <h2 id="title" class="text-center mt-5">Question</h2>
+    <input id="type" type="hidden" value="EI">
+    <button id="A" type="button" class="btn btn-success mt-5">A</button>
+    <button id="B" type="button" class="btn btn-success mt-5">B</button>
+</article>
+
+<article class="result">
+    <h2 id="animal" class="text-center mt-5">이름</h2>
+    <h3 id="explain" class="text-center mt-5">설명</h3>
+    <img id="img" class="img-box mt-5" width="300px" src="MBTI">
+    <div class="share addthis_inline_share_toolbox"></div>
+</article>
+
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
+
+<input type="hidden" id="EI" value="0">
+<input type="hidden" id="SN" value="0">
+<input type="hidden" id="TF" value="0">
+<input type="hidden" id="JP" value="0">
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+<script>
+    var num = 1;
+    var q = {
+        1:{"title": "밖에 비가 오는데 친구들이 놀자고 한다.", "type": "EI", "A": "축구도 수중전이 재밌디요~", "B": "비올땐 집에서 넷플릭스 보는게 국룰이디요~"},
+        2:{"title": "친한 친구는?", "type": "EI", "A": "많을수록 좋다!", "B": "한 명이면 충분!"},
+        3:{"title": "같은 연봉을 받는다면?", "type": "EI", "A": "유명한 축구선수!", "B": "존경받는 판.검사!"},
+
+        4:{"title": "나는 일처리를", "type": "SN", "A": "정확하게 하는 스타일", "B": "신속하게 하는 스타일"},
+        5:{"title": "일찍 일어나야 하는데 일어나보니 해가 떠있다.", "type": "SN", "A": "지각이다..", "B": "다행이 안늦었다"},
+        6:{"title": "번뜩 기가막힌 아이디어가 떠올랐다!", "type": "SN", "A": "어차피 내가 하면 망하니 안 한다.", "B": "한 번뿐인 인생 창업을 해본다!"},
+
+        7:{"title": "요즘 비트코인이 대세라던데", "type": "TF", "A": "도박같아 두렵다", "B": "조금만 넣어볼까?"},
+        8:{"title": "내가 생각해도 나는", "type": "TF", "A": "이과", "B": "문과"},
+        9:{"title": "내가 판사인데 친한 친구가 범죄를 저질렀다면", "type": "TF", "A": "법대로 처벌한다.", "B": "잘못된 걸 알지만 눈감아준다."},
+
+        10:{"title": "친구가 차가막혀 조금 늦었다고 한다.", "type": "JP", "A": "그래도 늦은 건 잘못이다.", "B": "차가 막혔으니 그러려니 한다."},
+        11:{"title": "나는 융통성이", "type": "JP", "A": "없다고 생각한다.", "B": "있다고 생각한다."},
+        12:{"title": "오랜만에 미국에서 온 친구가 갑자기 만나자는데 나는 중요한 약속이 있다.", "type": "JP", "A": "그래도 난 약속을 지킨다.", "B": "오랜만에 멀리서 친구가 왔으니 약속을 미룬다."},
+    }
+
+    var result = {
+        "ISTJ": {"animal": "당신은 ISTJ !!!", "explain": "소금형 - 한번 시작한 일은 끝까지 해내는 TYPE", "img": "img/istjb.jpeg"},
+        "ISFJ": {"animal": "당신은 ISFJ !!!", "explain": "권력형 - 성실하고 온화하며 협조를 잘하는 사람", "img": "img/isfjb.jpeg"},
+        "INFJ": {"animal": "당신은 INFJ !!!", "explain": "예언자형 - 사람에 관한 뛰어난 통찰력을 가진 사람", "img": "img/infjb.jpeg"},
+        "INTJ": {"animal": "당신은 INTJ !!!", "explain": "과학자형 - 전체를 조합해 비전을 제시하는 사람", "img": "img/intjb.jpeg"},
+        "ISTP": {"animal": "당신은 ISTP !!!", "explain": "백과사전형 - 논리적이고 뛰어난 상황 적응력", "img": "img/istpb.jpeg"},
+        "ISFP": {"animal": "당신은 ISFP !!!", "explain": "성인군자형 - 따뜻한 감성을 가진 겸손한 사람", "img": "img/isfpb.jpeg"},
+        "INFP": {"animal": "당신은 INFP !!!", "explain": "잔다르크형 - 이상적인 세상을 만들어가는 사람들", "img": "img/infpb.jpeg"},
+        "INTP": {"animal": "당신은 INTP !!!", "explain": "아이디어형 - 비평적인 관점을 가진 뛰어난 전략가", "img": "img/intpb.jpeg"},
+        "ESTP": {"animal": "당신은 ESTP !!!", "explain": "활동가형 - 친구, 운동, 음식 등 다양함을 선호", "img": "img/estpb.jpeg"},
+        "ESFP": {"animal": "당신은 ESFP !!!", "explain": "사교형 - 분위기를 고조시키는 우호적인 TYPE", "img": "img/esfpb.jpeg"},
+        "ENFP": {"animal": "당신은 ENFP !!!", "explain": "스파크형 - 열정적으로 새 관계를 만드를 사람", "img": "img/enfpb.jpeg"},
+        "ENTP": {"animal": "당신은 ENTP !!!", "explain": "발명가형 - 풍부한 상상력으로 새로운 것에 도전", "img": "img/entpb.jpeg"},
+        "ESTJ": {"animal": "당신은 ESTJ !!!", "explain": "사업가형 - 사무적, 실용적, 현실적인 스타일", "img": "img/estjb.jpeg"},
+        "ESFJ": {"animal": "당신은 ESFJ !!!", "explain": "친선도모형 - 친절, 현실감을 바탕으로 타인에게 봉사", "img": "img/esfjb.jpeg"},
+        "ENFJ": {"animal": "당신은 ENFJ !!!", "explain": "언변능숙형 - 타인의 성장을 도모하고 협동하는 사람", "img": "img/enfjb.jpeg"},
+        "ENTJ": {"animal": "당신은 ENTJ !!!", "explain": "지도자형 - 비전을 갖고 타인을 활력적으로 인도", "img": "img/entjb.jpeg"}
+    }
+
+    function start() {
+        $(".start").hide();
+        $(".question").show();
+        next();
+    }
+
+    $("#A").click(function(){
+        var type = $("#type").val();
+        var preValue = $("#"+type).val();
+        $("#"+type).val(parseInt(preValue)+1);
+        next();
+    });
+
+    $("#B").click(function() {
+        next();
+    });
+
+    function next() {
+        if (num == 13) {
+            $(".question").hide();
+            $(".result").show();
+            var mbti = "";
+            ($("#EI").val() < 2) ? mbti += "I" : mbti += "E";
+            ($("#SN").val() < 2) ? mbti += "N" : mbti += "S";
+            ($("#TF").val() < 2) ? mbti += "F" : mbti += "T";
+            ($("#JP").val() < 2) ? mbti += "P" : mbti += "J";
+            $("#img").attr("src", result[mbti]["img"]);
+            $("#animal").html(result[mbti]["animal"]);
+            $("#explain").html(result[mbti]["explain"]);
+        } else {
+            $(".progress-bar").attr("style", "width: calc(100/12*"+num+"%)");
+            $("#title").html(q[num]["title"]);
+            $("#type").val(q[num]["type"]);
+            $("#A").html(q[num]["A"]);
+            $("#B").html(q[num]["B"]);
+            num++; 
+        }
+    }
+</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-6071413a630114a0"></script>
+  <footer class="footer"> Copyright &copy; 2021 전소연 Corp.</footer>
+</body>
+</html>
